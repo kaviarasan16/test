@@ -1,0 +1,35 @@
+1.Create 20 files with .txt extensions
+
+ubuntu@ip-172-31-39-66:~$ touch test{1..20}.txt
+ubuntu@ip-172-31-39-66:~$ ls
+test1.txt   test11.txt  test13.txt  test15.txt  test17.txt  test19.txt  test20.txt  test4.txt  test6.txt  test8.txt
+test10.txt  test12.txt  test14.txt  test16.txt  test18.txt  test2.txt   test3.txt   test5.txt  test7.txt  test9.txt
+ubuntu@ip-172-31-39-66:~$
+
+2.rename the first 5 files to .yml extension
+ubuntu@ip-172-31-39-66:~$ ls |head -5
+test1.txt
+test10.txt
+test11.txt
+test12.txt
+test13.txt
+ubuntu@ip-172-31-39-66:~$ mv test1.txt demo1.yml
+ubuntu@ip-172-31-39-66:~$ mv test10.txt demo10.yml
+ubuntu@ip-172-31-39-66:~$ mv test11.txt demo11.yml
+ubuntu@ip-172-31-39-66:~$ mv test12.txt demo12.yml
+ubuntu@ip-172-31-39-66:~$ mv test13.txt demo13.yml
+
+3.Print the latest created top 5 files among the total no of files
+ubuntu@ip-172-31-39-66:~$ ls
+demo1.yml   demo11.yml  demo13.yml  test15.txt  test17.txt  test19.txt  test20.txt  test4.txt  test6.txt  test8.txt
+demo10.yml  demo12.yml  test14.txt  test16.txt  test18.txt  test2.txt   test3.txt   test5.txt  test7.txt  test9.txt
+
+
+ubuntu@ip-172-31-39-66:~$ ls -lt | head -n 6
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jun  6 17:04 demo1.yml
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jun  6 17:04 demo10.yml
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jun  6 17:04 demo11.yml
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jun  6 17:04 demo12.yml
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jun  6 17:04 demo13.yml
+ubuntu@ip-172-31-39-66:~$
